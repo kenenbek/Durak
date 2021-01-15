@@ -6,7 +6,7 @@ from typing import Union
 
 class Game:
     def __init__(self, large=False, players_amount=2):
-        #random.seed(42)
+        random.seed(123456)
         self.cards = {}
         self.players = {}
         self.prikup = []
@@ -54,7 +54,7 @@ class Game:
             first_player = self.players[random_id]
         
         # TODO always return user
-        #first_player = self.players[0]
+        first_player = self.players[0]
         return first_player
     
     def get_cards(self, amount):
